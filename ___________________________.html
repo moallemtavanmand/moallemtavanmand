@@ -1,0 +1,473 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داشبورد — شبیه‌ساز کلاس درس</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="ecace905e23cffd5===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'success': '#15803D',
+        'on-success': '#FFFFFF',
+        'success-container': '#DCFCE7',
+        'on-success-container': '#14532D',
+        'warning': '#B45309',
+        'on-warning': '#FFFFFF',
+        'warning-container': '#FEF3C7',
+        'on-warning-container': '#78350F',
+        'info': '#0369A1',
+        'on-info': '#FFFFFF',
+        'info-container': '#E0F2FE',
+        'on-info-container': '#0C4A6E',
+        'light-primary': '#001D41',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#16325B',
+        'light-on-primary-container': '#D6E3FF',
+        'light-secondary': '#006A61',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#86F2E4',
+        'light-on-secondary-container': '#003732',
+        'light-tertiary': '#301700',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#4E2900',
+        'light-on-tertiary-container': '#FFDCC0',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FBF9F4',
+        'light-on-background': '#1B1C19',
+        'light-surface': '#FBF9F4',
+        'light-surface-dim': '#DBDAD5',
+        'light-surface-bright': '#FBF9F4',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F5F3EE',
+        'light-surface-container': '#F0EEE9',
+        'light-surface-container-high': '#EAE8E3',
+        'light-surface-container-highest': '#E4E2DD',
+        'light-on-surface': '#1B1C19',
+        'light-surface-variant': '#E0E2EC',
+        'light-on-surface-variant': '#44474E',
+        'light-outline': '#74777F',
+        'light-outline-variant': '#C4C6D0',
+        'light-inverse-surface': '#30312E',
+        'light-inverse-on-surface': '#F2F1EC',
+        'light-inverse-primary': '#AEC7F9',
+        'dark-primary': '#AEC7F9',
+        'dark-on-primary': '#143059',
+        'dark-primary-container': '#16325B',
+        'dark-on-primary-container': '#D6E3FF',
+        'dark-secondary': '#6BD8CB',
+        'dark-on-secondary': '#003732',
+        'dark-secondary-container': '#29A195',
+        'dark-on-secondary-container': '#001D1A',
+        'dark-tertiary': '#F7BA84',
+        'dark-on-tertiary': '#4B2700',
+        'dark-tertiary-container': '#4E2900',
+        'dark-on-tertiary-container': '#FFDCC0',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#131411',
+        'dark-on-background': '#E4E2DD',
+        'dark-surface': '#131411',
+        'dark-surface-dim': '#131411',
+        'dark-surface-bright': '#393936',
+        'dark-surface-container-lowest': '#0E0E0C',
+        'dark-surface-container-low': '#1B1C19',
+        'dark-surface-container': '#1F201D',
+        'dark-surface-container-high': '#2A2A27',
+        'dark-surface-container-highest': '#353532',
+        'dark-on-surface': '#E4E2DD',
+        'dark-surface-variant': '#44474E',
+        'dark-on-surface-variant': '#C4C6D0',
+        'dark-outline': '#8E9099',
+        'dark-outline-variant': '#44474E',
+        'dark-inverse-surface': '#E4E2DD',
+        'dark-inverse-on-surface': '#30312E',
+        'dark-inverse-primary': '#465F8A',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '40px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Vazirmatn"', 'sans-serif'],
+        'headline': ['"Vazirmatn"', 'sans-serif'],
+        'title': ['"Vazirmatn"', 'sans-serif'],
+        'body': ['"Vazirmatn"', 'sans-serif'],
+        'label': ['"Vazirmatn"', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['36px', { lineHeight: '48px', letterSpacing: '0px', fontWeight: '800' }],
+        'display-lg-mobile': ['28px', { lineHeight: '38px', letterSpacing: '0px', fontWeight: '800' }],
+        'headline-lg': ['28px', { lineHeight: '38px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-sm': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-lg': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['14px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'surface-enter': '220ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block; width: 1em; height: 1em; line-height: 1 !important;
+      box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-light-surface text-light-on-surface font-body antialiased">
+  <div class="min-h-screen flex flex-col lg:flex-row bg-light-surface">
+
+    <!-- Mobile Header -->
+    <header class="lg:hidden sticky top-0 z-30 flex items-center justify-between px-gutter-md py-gutter-sm bg-light-surface-container-lowest border-b border-light-outline-variant/60">
+      <div class="flex items-center gap-gutter-sm">
+        <div class="w-9 h-9 rounded bg-light-primary text-light-on-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-title-lg" aria-hidden="true">school</span>
+        </div>
+        <span data-design-text-token="title-lg" class="font-title text-title-lg text-light-primary">شبیه‌ساز کلاس درس</span>
+      </div>
+      <button type="button" id="mobile-menu-btn" aria-label="باز کردن منو" class="inline-flex items-center justify-center w-10 h-10 rounded bg-light-surface-container-low text-light-on-surface">
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+    </header>
+
+    <!-- Persistent RTL Navigation Sidebar -->
+    <aside class="hidden lg:flex lg:flex-col lg:w-64 lg:shrink-0 bg-light-surface-container-low border-l border-light-outline-variant/60 min-h-screen justify-between p-gutter-md">
+      <div class="flex flex-col gap-gutter-lg">
+        <div class="flex items-center gap-gutter-sm px-gutter-sm py-gutter-xs">
+          <div class="w-10 h-10 rounded-md bg-light-primary text-light-on-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">school</span>
+          </div>
+          <div class="flex flex-col">
+            <span data-design-text-token="title-lg" class="font-title text-title-lg text-light-primary">شبیه‌ساز کلاس</span>
+            <span data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant">آموزش مدیریت کلاس</span>
+          </div>
+        </div>
+
+        <nav aria-label="منوی اصلی" class="flex flex-col gap-gutter-xs">
+          <a href="../dashboard/Dashboard.html" aria-current="page" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded bg-light-primary text-light-on-primary transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">dashboard</span>
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">داشبورد</span>
+          </a>
+          <a href="../virtual-classroom/VirtualClassroom.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded text-light-on-surface-variant hover:bg-light-surface-container hover:text-light-on-surface transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">co_present</span>
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">کلاس مجازی</span>
+          </a>
+          <a href="../student-profile/StudentProfile.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded text-light-on-surface-variant hover:bg-light-surface-container hover:text-light-on-surface transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">groups</span>
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">پروفایل دانش‌آموز</span>
+          </a>
+          <a href="../session-report/SessionReport.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded text-light-on-surface-variant hover:bg-light-surface-container hover:text-light-on-surface transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">assessment</span>
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">گزارش جلسه</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-gutter-md border-t border-light-outline-variant/60 flex items-center gap-gutter-sm px-gutter-sm">
+        <div data-component-id="avatar-initials" data-component-type="avatar" data-component-variant="initials" class="w-10 h-10 rounded-full bg-light-secondary text-light-on-secondary flex items-center justify-center shrink-0">
+          <span data-design-text-token="label-lg" class="font-label text-label-lg">م‌ر</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">استاد مریم رضوی</span>
+          <span data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant truncate">دبیر ریاضی پایه هفتم</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col gap-gutter-lg p-gutter-md lg:p-gutter-xl max-w-6xl w-full mx-auto">
+
+      <!-- Welcome Hero Card -->
+      <section class="bg-light-surface-container-lowest border border-light-outline-variant/60 rounded-lg p-gutter-lg lg:p-gutter-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-gutter-lg">
+        <div class="flex flex-col gap-gutter-sm max-w-2xl">
+          <span data-design-text-token="label-md" class="font-label text-label-md text-light-secondary">خوش آمدید، استاد مریم رضوی</span>
+          <h1 data-design-text-token="headline-lg" class="font-headline text-headline-lg text-light-primary text-balance">مهارت‌های مدیریت کلاس خود را در محیطی امن و واقعی تمرین کنید</h1>
+          <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">
+            در این شبیه‌ساز با ۸ دانش‌آموز مجازی دارای شخصیت‌ها و رفتارهای متفاوت تعامل می‌کنید و بازخورد تحلیلی دریافت می‌کنید.
+          </p>
+        </div>
+        <div class="shrink-0">
+          <a href="../virtual-classroom/VirtualClassroom.html" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-xl py-gutter-md rounded bg-light-primary text-light-on-primary hover:bg-light-primary-container transition-colors duration-state-change shadow-sm">
+            <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">play_circle</span>
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">شروع کلاس جدید</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section aria-label="نحوه کار شبیه‌ساز" class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md items-stretch">
+        <article class="bg-light-surface-container-low border border-light-outline-variant/50 rounded-lg p-gutter-lg flex flex-col gap-gutter-sm h-full">
+          <div class="w-10 h-10 rounded bg-light-primary-container text-light-on-primary-container flex items-center justify-center">
+            <span class="material-symbols-outlined" aria-hidden="true">tune</span>
+          </div>
+          <h2 data-design-text-token="title-lg" class="font-title text-title-lg text-light-primary">۱. تنظیم سناریوی کلاس</h2>
+          <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant">مقطع تحصیلی، موضوع درس و ترکیب رفتاری دانش‌آموزان را متناسب با هدف تمرینی خود انتخاب کنید.</p>
+        </article>
+        <article class="bg-light-surface-container-low border border-light-outline-variant/50 rounded-lg p-gutter-lg flex flex-col gap-gutter-sm h-full">
+          <div class="w-10 h-10 rounded bg-light-secondary text-light-on-secondary flex items-center justify-center">
+            <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+          </div>
+          <h2 data-design-text-token="title-lg" class="font-title text-title-lg text-light-primary">۲. گفتگوی جمعی و خصوصی</h2>
+          <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant">با کل کلاس صحبت کنید، به سوالات ناگهانی پاسخ دهید و با دانش‌آموزان مقاوم یا خجالتی گفتگوی خصوصی داشته باشید.</p>
+        </article>
+        <article class="bg-light-surface-container-low border border-light-outline-variant/50 rounded-lg p-gutter-lg flex flex-col gap-gutter-sm h-full">
+          <div class="w-10 h-10 rounded bg-light-primary text-light-on-primary flex items-center justify-center">
+            <span class="material-symbols-outlined" aria-hidden="true">insights</span>
+          </div>
+          <h2 data-design-text-token="title-lg" class="font-title text-title-lg text-light-primary">۳. تحلیل و گزارش جلسه</h2>
+          <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant">در پایان جلسه، نرخ مشارکت دانش‌آموزان و راهکارهای پیشنهادی مدیریت کلاس را مرور کنید.</p>
+        </article>
+      </section>
+
+      <!-- Recent Sessions + Classroom Settings -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+
+        <!-- Recent Simulation Sessions -->
+        <section aria-label="جلسات شبیه‌سازی اخیر" class="lg:col-span-7 bg-light-surface-container-lowest border border-light-outline-variant/60 rounded-lg p-gutter-lg shadow-sm flex flex-col gap-gutter-md">
+          <div class="flex items-center justify-between">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-primary">جلسات شبیه‌سازی اخیر</h2>
+            <a href="../session-report/SessionReport.html" class="text-label-md font-label text-light-secondary hover:underline">مشاهده همه گزارش‌ها</a>
+          </div>
+
+          <div class="flex flex-col gap-gutter-sm">
+            <a href="../session-report/SessionReport.html" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary hover:bg-light-surface-container-low transition-colors flex items-center justify-between gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface">ریاضی پایه هفتم — فصل کسرها</h3>
+                <span data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant">دیروز • مدت: ۲۲ دقیقه • ۸ دانش‌آموز</span>
+              </div>
+              <span class="px-gutter-sm py-gutter-xs rounded-full bg-success-container text-on-success-container text-label-md font-label tabular-nums">مشارکت ۸۲٪</span>
+            </a>
+
+            <a href="../session-report/SessionReport.html" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary hover:bg-light-surface-container-low transition-colors flex items-center justify-between gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface">علوم تجربی — ساختار سلول</h3>
+                <span data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant">۳ روز پیش • مدت: ۱۸ دقیقه • ۸ دانش‌آموز</span>
+              </div>
+              <span class="px-gutter-sm py-gutter-xs rounded-full bg-info-container text-on-info-container text-label-md font-label tabular-nums">مشارکت ۷۵٪</span>
+            </a>
+
+            <a href="../session-report/SessionReport.html" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary hover:bg-light-surface-container-low transition-colors flex items-center justify-between gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface">مدیریت چالش‌های انضباطی</h3>
+                <span data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant">هفته گذشته • مدت: ۳۰ دقیقه • ۸ دانش‌آموز</span>
+              </div>
+              <span class="px-gutter-sm py-gutter-xs rounded-full bg-warning-container text-on-warning-container text-label-md font-label tabular-nums">مشارکت ۶۸٪</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Classroom Settings -->
+        <section aria-label="تنظیمات کلاس" class="lg:col-span-5 bg-light-surface-container-lowest border border-light-outline-variant/60 rounded-lg p-gutter-lg shadow-sm flex flex-col gap-gutter-md">
+          <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-primary">تنظیمات کلاس جدید</h2>
+          <form id="class-settings-form" class="flex flex-col gap-gutter-md">
+            <label class="flex flex-col gap-gutter-xs">
+              <span data-design-text-token="label-md" class="font-label text-label-md text-light-on-surface">نام کلاس</span>
+              <input id="setting-class-name" type="text" value="ریاضی پایه هفتم — گروه الف" class="w-full rounded px-gutter-md py-gutter-sm bg-light-surface-container-lowest border border-light-outline-variant text-body-md text-light-on-surface focus:border-light-secondary focus:ring-1 focus:ring-light-secondary">
+            </label>
+            <label class="flex flex-col gap-gutter-xs">
+              <span data-design-text-token="label-md" class="font-label text-label-md text-light-on-surface">پایه تحصیلی</span>
+              <select id="setting-grade" class="w-full rounded px-gutter-md py-gutter-sm bg-light-surface-container-lowest border border-light-outline-variant text-body-md text-light-on-surface focus:border-light-secondary focus:ring-1 focus:ring-light-secondary">
+                <option value="چهارم">پایه چهارم (ابتدایی)</option>
+                <option value="پنجم">پایه پنجم (ابتدایی)</option>
+                <option value="ششم">پایه ششم (ابتدایی)</option>
+                <option value="هفتم" selected>پایه هفتم (متوسطه اول)</option>
+                <option value="هشتم">پایه هشتم (متوسطه اول)</option>
+                <option value="نهم">پایه نهم (متوسطه اول)</option>
+                <option value="دهم">پایه دهم (متوسطه دوم)</option>
+                <option value="یازدهم">پایه یازدهم (متوسطه دوم)</option>
+                <option value="دوازدهم">پایه دوازدهم (متوسطه دوم)</option>
+              </select>
+            </label>
+            <div class="flex flex-col gap-gutter-xs">
+              <span data-design-text-token="label-md" class="font-label text-label-md text-light-on-surface">جنسیت دانش‌آموزان</span>
+              <div id="setting-gender-group" class="grid grid-cols-3 gap-gutter-xs" role="radiogroup" aria-label="جنسیت دانش‌آموزان">
+                <button type="button" data-gender-option="boys" class="px-gutter-sm py-gutter-sm rounded border border-light-outline-variant bg-light-surface-container-low text-light-on-surface text-label-md font-label transition-colors">پسر</button>
+                <button type="button" data-gender-option="girls" class="px-gutter-sm py-gutter-sm rounded border border-light-outline-variant bg-light-surface-container-low text-light-on-surface text-label-md font-label transition-colors">دختر</button>
+                <button type="button" data-gender-option="mixed" class="px-gutter-sm py-gutter-sm rounded border border-light-primary bg-light-primary text-light-on-primary text-label-md font-label transition-colors">مختلط</button>
+              </div>
+            </div>
+            <label class="flex flex-col gap-gutter-xs">
+              <span data-design-text-token="label-md" class="font-label text-label-md text-light-on-surface">سطح چالش رفتاری هوش مصنوعی</span>
+              <select class="w-full rounded px-gutter-md py-gutter-sm bg-light-surface-container-lowest border border-light-outline-variant text-body-md text-light-on-surface focus:border-light-secondary focus:ring-1 focus:ring-light-secondary">
+                <option>متعادل (پیشنهادی)</option>
+                <option>آرام و همکار</option>
+                <option>پُرتنش و چالشی</option>
+              </select>
+            </label>
+            <a id="btn-enter-classroom" href="../virtual-classroom/VirtualClassroom.html?grade=هفتم&amp;gender=mixed" class="inline-flex items-center justify-center gap-gutter-xs px-gutter-md py-gutter-sm rounded bg-light-secondary text-light-on-secondary hover:opacity-90 transition-opacity">
+              <span data-design-text-token="label-lg" class="font-label text-label-lg">ذخیره و ورود به کلاس</span>
+            </a>
+          </form>
+        </section>
+
+      </div>
+
+      <!-- Student Management Section -->
+      <section aria-label="مدیریت دانش‌آموزان مجازی" class="bg-light-surface-container-lowest border border-light-outline-variant/60 rounded-lg p-gutter-lg shadow-sm flex flex-col gap-gutter-md">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-primary">مدیریت دانش‌آموزان مجازی (۸ تیپ شخصیتی)</h2>
+            <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant">هر دانش‌آموز دارای پروفایل شخصیتی مستقل و حافظه رفتاری در طول جلسه است.</p>
+          </div>
+          <a href="../student-profile/StudentProfile.html" class="text-label-md font-label text-light-secondary hover:underline">مشاهده همه پروفایل‌ها</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md">
+          <a href="../student-profile/StudentProfile.html?student=arash" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBMcvdOQxdnIMFAmSHWrYqMvXX5D8__CXXek1TZk2398J-wHZmbHxyf7RR-MCwC9qSIwMeM5orQb_PobBQSOdX_mHYepsseIVp5J6P8kCPyLBFJKajF9rkDUQoYUXBUZTV4YOArUqUXeOQyeenShvfM2lG94zITCQsgnT1Jy-x0o8FF1WxR4nYDTZ9IONcQNy-5vI1wQTC-9i-vBycJ35PsIauPfbId18GuaMjTNnq7KsAPwzn__g" alt="آرش محمدی" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="273256497082ea8f===../../images/student_arash.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">آرش محمدی</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">پرحرف و اجتماعی</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=sara" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBQkksLaPgaWqok_fgA-BG-me3qgDs54Vk01IzvARjT2JBim2PeBeFnEJJEMzLxG55ODb2JjcivX0xqkGcQZIdb05DMYwGad8xu1k_TZktT04x8LD9qTGHF2rUJVAjBT_tfd9EMoRP_BK8ctaNGIR4HwdcSo4S_OsralBeDfYg9F-tHUZeyKkpUMvk_UV9A0Tzj6xGvq6Fsr8LXSG0UgFjMGl4E-HdKKXSDPr8hOR4BxQvQoI-R" alt="سارا کریمی" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="a1c77134781ba834===../../images/student_sara.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">سارا کریمی</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">آرام و خجالتی</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=nima" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrC102t06cCul_MWk7fdqbZ8ciblMRBoqj5Pzep5QOSBbPu9RNlah-rDRYQ71tJr2_PCPbcRSFmcwYoFucHV1LbXCyjwblbrWbzs7xwJOXgzp3OAbXaDk-d4DgzSVbw1kOgMGzcTSiChRFBVFxFTzaFxE7vmM-KiW--2VG21vlZVea8xmtxqYMBJGc2hVyPtwJZT9DEDkr57N7aciRJTYq1uLo1IwhBmNi0Yh0cnsxprtXIjtBA9" alt="نیما رضایی" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="e1f2e8dfff873cf2===../../images/student_nima.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">نیما رضایی</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">کنجکاو و پرسشگر</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=parsa" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDM8Uf_3-xiyOm09J7oyKw38j0_rm592ShPyPeeBqf54uuqseARyw-61Bc7LqPQR8VUM9xyTwnV_q2oW1nn17ZKfMxsjk6KlQouzolUSdA_TZbZgDEGgyAzKxOZPhCycJr1qqFapYNSw9ZSyJvpH--YmxnJbxgWJ1AGnt0NgwnyBDUYLHMFpz40tv--RjJlAlP-dfuIIQfJpLcDCwVM4eZNL2VKClq0c9TdH5vF4FUZrkGYql1aPw" alt="پارسا حسینی" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="048426f27eca5b38===../../images/student_parsa.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">پارسا حسینی</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">باهوش اما بی‌انگیزه</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=mina" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrCT-zk8a2TZkSk6NuwhVwPI-ptci6-hZjd13iRFijSSl8syQsGu-alB2cNDBRUl-KlJL-dSTCQAHY9Cpk3ZvT0sP6yiMtEG0uqth6O4fxZyIhbL9J-PpzuvJk3hgq_A7O_fvB_hldgF5tmsQ7GU8DbY_eH3FfMgjw62NNTgmUkWJiDjqcjYFWSQfh2ljVBVraUjWwV4q-7FbXyuwoWuhito64IiKrP0M2YxTQWoP7Jny7qiYWea" alt="مینا فرهادی" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="ca2a7a6625c88ded===../../images/student_mina.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">مینا فرهادی</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">حواس‌پرت و کم‌تمرکز</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=kian" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrC-5qzjBgmzvRPJFMfMRLXP4alzAe09krHHYwVbnAzkONYiQBioNKQCDdUrpbtMhCLusXril4TtaR2Y-WZ_P4g2VfjvK9bpb6Kb5QmdHpxtQt_CUKXjAKvCGas8Clh6T-ORO8OyGnM0wlFzx49OIN8kssibC-NpvPmTHLn8-jDe05e_p_yjYHWlmUZj3V5K7yp8JUXY3YG5rbIy4ImMmWyYFgBRonFqJbJZFfWP6D34tevDk9o6" alt="کیان طاهری" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="b8662a33da3704bc===../../images/student_kian.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">کیان طاهری</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">بحث‌برانگیز و مقاوم</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=zahra" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDXFd4c5lAsAI9ZCGAeKNpfMRzn-PVqUQ9iH2RFh26gmJEb3PDlX0h9jHWdI1Jp7RDLmguzGXhyb5y0pOcMFBlZyW1X1WPevkLGOAbFanSKXzhbOJkVQmpqF_8B3vxroUDhv_qhXjCckJQXo7-T4l2fDYtj4x1mf9nue5_61z1CDIUwpyAfZK-TBuxFzMeBPi-PU01-hpldd-qcBsI0aprAPLhGyJ-BeEoOS8n-Gtvs4FJdeFi3aA" alt="زهرا نادری" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="048ab96f43e662ec===../../images/student_zahra.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">زهرا نادری</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">مسئولیت‌پذیر و فعال</p>
+            </div>
+          </a>
+          <a href="../student-profile/StudentProfile.html?student=amir" class="p-gutter-md rounded-md border border-light-outline-variant/60 hover:border-light-secondary transition-colors flex items-center gap-gutter-sm">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrB5es_ZpVJb5MJV_F5hVlOaMrpETtZxlNyAq7mTPyZS2uz16ocD80z_4aHyfIboRwob8uvjLtUMd3yPKlJq6Yv9Kf_flKCEWefhhCFe1VFeSXSU7hwIcCER_CIc-YgWJVv8Li7XpgYDR7B9f8pSJ8HzO-jXChz0BVCrSb677-uI8EXRcnsrBmfzwzcOda-BuW_aVvh03w7xfKSQCpmVWOVFTCGzh2bc7z4JH7k8Vkpcmusy4biA" alt="امیرحسین مرادی" class="w-11 h-11 rounded-full object-cover shrink-0" data-stitch-original-src="3db80a14246af4d9===../../images/student_amir.jpg">
+            <div class="min-w-0">
+              <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface truncate">امیرحسین مرادی</h3>
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-secondary truncate">نیازمند حمایت درسی</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="hidden fixed inset-0 z-40 bg-light-on-surface/40 lg:hidden">
+    <div class="w-64 bg-light-surface-container-low min-h-screen p-gutter-md flex flex-col justify-between">
+      <div class="flex flex-col gap-gutter-md">
+        <div class="flex items-center justify-between">
+          <span data-design-text-token="title-lg" class="font-title text-title-lg text-light-primary">منوی برنامه</span>
+          <button type="button" id="close-mobile-drawer" aria-label="بستن منو" class="w-9 h-9 rounded flex items-center justify-center hover:bg-light-surface-container">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-gutter-xs">
+          <a href="../dashboard/Dashboard.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded bg-light-primary text-light-on-primary">داشبورد</a>
+          <a href="../virtual-classroom/VirtualClassroom.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded text-light-on-surface-variant">کلاس مجازی</a>
+          <a href="../student-profile/StudentProfile.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded text-light-on-surface-variant">پروفایل دانش‌آموز</a>
+          <a href="../session-report/SessionReport.html" class="flex items-center gap-gutter-sm px-gutter-md py-gutter-sm rounded text-light-on-surface-variant">گزارش جلسه</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-drawer').classList.remove('hidden'));
+    document.getElementById('close-mobile-drawer').addEventListener('click', () => document.getElementById('mobile-drawer').classList.add('hidden'));
+
+    let selectedGender = 'mixed';
+    const gradeSelect = document.getElementById('setting-grade');
+    const enterBtn = document.getElementById('btn-enter-classroom');
+
+    function updateEnterLink() {
+      const grade = encodeURIComponent(gradeSelect.value);
+      enterBtn.href = `../virtual-classroom/VirtualClassroom.html?grade=${grade}&gender=${selectedGender}`;
+    }
+
+    gradeSelect.addEventListener('change', updateEnterLink);
+    document.querySelectorAll('[data-gender-option]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedGender = btn.getAttribute('data-gender-option');
+        document.querySelectorAll('[data-gender-option]').forEach(b => {
+          b.className = b === btn
+            ? 'px-gutter-sm py-gutter-sm rounded border border-light-primary bg-light-primary text-light-on-primary text-label-md font-label transition-colors'
+            : 'px-gutter-sm py-gutter-sm rounded border border-light-outline-variant bg-light-surface-container-low text-light-on-surface text-label-md font-label transition-colors';
+        });
+        updateEnterLink();
+      });
+    });
+  </script>
+
+
+</body></html>
